@@ -2,7 +2,7 @@ Dependencies for Project 'stm32f103', Target 'Template': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\arm\startup_stm32f101xb.s)(0x6437E90F)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-IE:\Keil_v5l\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include--pd "__UVISION_VERSION SETA 534" --pd "STM32F10X_MD SETA 1"--list ..\..\output\startup_stm32f101xb.lst --xref -o ..\..\output\startup_stm32f101xb.o --depend ..\..\output\startup_stm32f101xb.d)
 F (..\..\Users\main.c)(0x65CDD958)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include -I ..\..\Drivers\STM32F1xx_HAL_Driver\Inc -I ..\..\Drivers\CMSIS\Include -I ..\..\Drivers -I ..\..\Users -I ..\..\Drivers\SYSTEM\delay -I ..\..\Drivers\SYSTEM\uart1 -I ..\..\Drivers\SYSTEM\sys-IE:\Keil_v5l\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
-I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315E96)
+I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315EA3)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Include\core_cm3.h)(0x6531F920)
@@ -173,7 +173,7 @@ I (..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h)(0x6437E90F)
 I (..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h)(0x6437E90F)
 F (..\..\Drivers\SYSTEM\delay\delay.c)(0x6603E241)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include -I ..\..\Drivers\STM32F1xx_HAL_Driver\Inc -I ..\..\Drivers\CMSIS\Include -I ..\..\Drivers -I ..\..\Users -I ..\..\Drivers\SYSTEM\delay -I ..\..\Drivers\SYSTEM\uart1 -I ..\..\Drivers\SYSTEM\sys-IE:\Keil_v5l\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ..\..\output\delay.o --omf_browse ..\..\output\delay.crf --depend ..\..\output\delay.d)
 I (..\..\Drivers\SYSTEM\delay\delay.h)(0x65BDB313)
-I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315E96)
+I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315EA3)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Include\core_cm3.h)(0x6531F920)
@@ -229,7 +229,7 @@ I (..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h)(0x6437E90F)
 I (..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h)(0x6437E90F)
 I (..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h)(0x6437E90F)
 F (..\..\Drivers\SYSTEM\uart1\uart1.c)(0x65BDB680)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include -I ..\..\Drivers\STM32F1xx_HAL_Driver\Inc -I ..\..\Drivers\CMSIS\Include -I ..\..\Drivers -I ..\..\Users -I ..\..\Drivers\SYSTEM\delay -I ..\..\Drivers\SYSTEM\uart1 -I ..\..\Drivers\SYSTEM\sys-IE:\Keil_v5l\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ..\..\output\uart1.o --omf_browse ..\..\output\uart1.crf --depend ..\..\output\uart1.d)
-I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315E96)
+I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315EA3)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Include\core_cm3.h)(0x6531F920)
@@ -288,7 +288,7 @@ I (..\..\Drivers\SYSTEM\uart1\uart1.h)(0x65BDB3E5)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 F (..\..\Drivers\SYSTEM\sys\sys.c)(0x6A315E6C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include -I ..\..\Drivers\STM32F1xx_HAL_Driver\Inc -I ..\..\Drivers\CMSIS\Include -I ..\..\Drivers -I ..\..\Users -I ..\..\Drivers\SYSTEM\delay -I ..\..\Drivers\SYSTEM\uart1 -I ..\..\Drivers\SYSTEM\sys-IE:\Keil_v5l\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ..\..\output\sys.o --omf_browse ..\..\output\sys.crf --depend ..\..\output\sys.d)
-I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315E96)
+I (..\..\Drivers\SYSTEM\sys\sys.h)(0x6A315EA3)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x6437E90F)
 I (..\..\Drivers\CMSIS\Include\core_cm3.h)(0x6531F920)
