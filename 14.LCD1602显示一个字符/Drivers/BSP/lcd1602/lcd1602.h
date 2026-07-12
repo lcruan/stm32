@@ -9,6 +9,7 @@ void lcd1602_start(void);
 void lcd1602_write_cmd(char cmd);
 void lcd1602_write_data(char dataShow);
 void lcd1602_show_char(void);
+void lcd1602_show_line(char row, char col, char *string);
 
 #endif
 

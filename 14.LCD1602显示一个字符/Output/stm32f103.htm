@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\..\Output\stm32f103.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\stm32f103.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Jul 12 17:15:52 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Jul 12 17:31:25 2026
 <BR><P>
 <H3>Maximum Stack Usage =        152 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -73,7 +73,7 @@ Global Symbols
 <P><STRONG><a name="[2e]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(.text)
 </UL>
-<P><STRONG><a name="[59]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[5a]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[30]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -83,17 +83,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[5a]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[5b]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[5b]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[5c]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[5c]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[5d]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[5d]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[5e]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[5e]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[5f]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[5f]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[60]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f101xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(RESET)
@@ -206,20 +206,20 @@ Global Symbols
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[60]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[61]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[61]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[62]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[32]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[58]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<P><STRONG><a name="[59]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_rx_clear
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 </UL>
 
-<P><STRONG><a name="[62]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[63]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[34]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -231,7 +231,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[63]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[64]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f1xx_it.o(i.BusFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(RESET)
@@ -243,14 +243,14 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = HAL_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_gpio_init
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
 </UL>
 
-<P><STRONG><a name="[53]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin))
+<P><STRONG><a name="[54]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin))
 <BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_write_data
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_write_cmd
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led2_off
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led1_off
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led2_off
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led1_off
 </UL>
 
 <P><STRONG><a name="[3f]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_hal.o(i.HAL_GetTick))
@@ -308,7 +308,7 @@ Global Symbols
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 </UL>
 
 <P><STRONG><a name="[40]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
@@ -323,7 +323,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 </UL>
 
 <P><STRONG><a name="[3a]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config))
@@ -384,7 +384,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[64]"></a>__1printf$2</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf2.o(i.__0printf$2), UNUSED)
+<P><STRONG><a name="[65]"></a>__1printf$2</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf2.o(i.__0printf$2), UNUSED)
 
 <P><STRONG><a name="[46]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf2.o(i.__0printf$2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -392,11 +392,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[65]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[66]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[66]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[67]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[67]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[68]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[4a]"></a>delay_ms</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, delay.o(i.delay_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_ms
@@ -441,6 +441,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<P><STRONG><a name="[53]"></a>lcd1602_show_line</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, lcd1602.o(i.lcd1602_show_line))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = lcd1602_show_line &rArr; lcd1602_write_data &rArr; delay_ms
+</UL>
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_write_data
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_write_cmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
 <P><STRONG><a name="[4f]"></a>lcd1602_start</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, lcd1602.o(i.lcd1602_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = lcd1602_start &rArr; lcd1602_write_cmd &rArr; delay_ms
 </UL>
@@ -454,9 +463,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = lcd1602_write_cmd &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_start
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_show_line
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_show_char
 </UL>
 
@@ -464,54 +474,56 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = lcd1602_write_data &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_show_char
+<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_show_line
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_show_char
 </UL>
 
-<P><STRONG><a name="[54]"></a>led1_off</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, led.o(i.led1_off))
+<P><STRONG><a name="[55]"></a>led1_off</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, led.o(i.led1_off))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = led1_off
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
 </UL>
 
-<P><STRONG><a name="[55]"></a>led2_off</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, led.o(i.led2_off))
+<P><STRONG><a name="[56]"></a>led2_off</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, led.o(i.led2_off))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = led2_off
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
 </UL>
 
-<P><STRONG><a name="[56]"></a>led_init</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, led.o(i.led_init))
+<P><STRONG><a name="[57]"></a>led_init</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, led.o(i.led_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = led_init &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led2_off
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led1_off
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led2_off
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led1_off
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2c]"></a>main</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[2c]"></a>main</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = main &rArr; stm32_clock_init &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_show_line
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_show_char
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1602_init
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[57]"></a>stm32_clock_init</STRONG> (Thumb, 102 bytes, Stack size 72 bytes, sys.o(i.stm32_clock_init))
+<P><STRONG><a name="[58]"></a>stm32_clock_init</STRONG> (Thumb, 102 bytes, Stack size 72 bytes, sys.o(i.stm32_clock_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = stm32_clock_init &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -519,7 +531,7 @@ Global Symbols
 <P><STRONG><a name="[47]"></a>uart1_rx_clear</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, uart1.o(i.uart1_rx_clear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uart1_rx_clear
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>

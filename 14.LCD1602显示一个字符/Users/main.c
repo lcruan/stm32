@@ -12,6 +12,8 @@ int main(void)
     led_init();
     lcd1602_init();
     lcd1602_show_char();
+    lcd1602_show_line(1, 2, "STM32");
+    lcd1602_show_line(2, 1, "lcruan");
     while(1)
     { 
 //        led1_on();

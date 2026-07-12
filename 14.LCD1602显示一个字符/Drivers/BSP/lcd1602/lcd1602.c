@@ -99,7 +99,32 @@ void lcd1602_write_data(char dataShow)
 void lcd1602_show_char()
 {
     // 在哪里显示
-    lcd1602_write_cmd(0x80+0x02);
+    lcd1602_write_cmd(0x80 + 0x02);
     // 显示什么
     lcd1602_write_data('L');
+}
+
+// 显示字符串
+void lcd1602_show_line(char row, char col, char *string)
+{
+    switch(row)
+    {
+        case 1:
+            lcd1602_write_cmd(0x80 + col);
+            while(*string)
+            {
+                lcd1602_write_data(*string);
+                string++;
+            }
+            break;
+        
+        case 2:
+            lcd1602_write_cmd(0x80 + 0x40 + col);
+            while(*string)
+            {
+                lcd1602_write_data(*string);
+                string++;
+            }
+            break;
+    }
 }
