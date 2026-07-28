@@ -56,3 +56,4 @@
 ..\..\output\dma.o: ..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h
 ..\..\output\dma.o: ..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h
 ..\..\output\dma.o: ..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h
+..\..\output\dma.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

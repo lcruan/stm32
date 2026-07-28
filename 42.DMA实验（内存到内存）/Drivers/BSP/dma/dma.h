@@ -3,6 +3,7 @@
 
 #include "sys.h"
 
-
+void dma_init(void);
+void dma_transmit(void);
 
 #endif
