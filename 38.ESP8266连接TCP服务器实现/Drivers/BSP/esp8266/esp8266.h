@@ -20,7 +20,7 @@
 #define ESP8266_MULTI_CONNECTION    1
 
 #define WIFI_SSID                   "ChinaNet-LCRK4V"
-#define WIFI_PWD                    "rrz20190923"
+#define WIFI_PWD                    ""
 
 #define TCP_SERVER_IP               "192.168.101.36"
 #define TCP_SERVER_PORT             "8080"
