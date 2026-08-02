@@ -1,0 +1,28 @@
+#include "sys.h"
+#include "delay.h"
+#include "led.h"
+#include "uart1.h"
+#include "dma.h"
+
+
+int main(void)
+{
+    HAL_Init();                         /* 初始化HAL库 */
+    stm32_clock_init(RCC_PLL_MUL9); /* 设置时钟, 72Mhz */
+    led_init();
+    uart1_init(115200);
+    dma_init();
+    printf("hello world!\r\n");
+    
+    
+    while(1)
+    { 
+        led1_on();
+        led2_off();
+        delay_ms(500);
+        led1_off();
+        led2_on();
+        delay_ms(500);
+    }
+}
+
