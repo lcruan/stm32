@@ -3,6 +3,7 @@
 
 #include "sys.h"
 
+void adc_dma_init(uint32_t *mar);
 
 #endif
 
