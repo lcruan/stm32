@@ -57,3 +57,4 @@
 ..\..\output\oled.o: ..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h
 ..\..\output\oled.o: ..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h
 ..\..\output\oled.o: ..\..\Drivers\SYSTEM\delay\delay.h
+..\..\output\oled.o: ..\..\Drivers\BSP\oled\font.h

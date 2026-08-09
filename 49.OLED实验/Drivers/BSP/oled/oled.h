@@ -24,6 +24,7 @@ void oled_write_cmd(uint8_t cmd);
 void oled_write_data(uint8_t data);
 void oled_fill(uint8_t data);
 void oled_set_cursor(uint8_t x, uint8_t y);
+void oled_show_char(uint8_t x, uint8_t y, uint8_t num, uint8_t size);
 
 #endif
 

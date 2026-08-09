@@ -1,5 +1,6 @@
 #include "oled.h"
 #include "delay.h"
+#include "font.h"
 
 void oled_gpio_init()
 {
@@ -152,6 +153,32 @@ void oled_fill(uint8_t data)
     }
 }
 
+void oled_show_char(uint8_t x, uint8_t y, uint8_t num, uint8_t size)
+{
+    uint8_t i, j, page;
+    
+    num = num - ' ';
+    
+    page = size / 8;
+    
+    if (size % 8)
+        page++;
+    
+    for (j = 0; j < page; j++)
+    {
+        oled_set_cursor(x, y + j);
+        for (i = size / 2 * j; i < size / 2 * (j + 1); i++)
+        {
+            if (size == 12)
+                oled_write_data(ascii_6X12[num][i]);
+            else if (size == 16)
+                oled_write_data(ascii_8X16[num][i]);
+            else if (size == 24)
+                oled_write_data(ascii_12X24[num][i]);
+        }
+        
+    }
+}
 
 
 
