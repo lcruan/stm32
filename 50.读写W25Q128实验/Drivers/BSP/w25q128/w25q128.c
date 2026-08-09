@@ -51,6 +51,70 @@ uint8_t w25q128_spi_swap_byte(uint8_t data)
     return recv_data;
 }
 
+void w25q128_init(void)
+{
+    w25q128_spi_init();
+}
+
+uint16_t w25q128_read_id(void)
+{
+    uint16_t device_id = 0;
+    W25Q128_CS(0);
+    
+    w25q128_spi_swap_byte(0x90);
+    w25q128_spi_swap_byte(0x00);
+    w25q128_spi_swap_byte(0x00);
+    w25q128_spi_swap_byte(0x00);
+    device_id = w25q128_spi_swap_byte(0xFF) << 8;
+    device_id |= w25q128_spi_swap_byte(0xFF);
+    
+    W25Q128_CS(1);
+    return device_id;
+}
+
+// Ð´Ê¹ÄÜ
+void w25q128_write_enable(void)
+{
+
+}
+
+// ¶ÁSR1
+uint8_t w25q128_read_sr1(void)
+{
+    
+}
+
+// ¶ÁÊý¾Ý
+void w25q128_read_data(uint32_t address, uint8_t *data, uint32_t size)
+{
+
+}
+
+// Ò³Ð´
+void w25q128_write_page(uint32_t address, uint8_t *data, uint16_t size)
+{
+
+}
+
+
+// ÉÈÇø²Á³ý
+void w25q128_erase_sector(uint32_t address)
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
