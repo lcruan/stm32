@@ -5,6 +5,15 @@
 
 #define W25Q128_CS(x)   do{ x ? HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET):HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);}while(0)
 
+/* ÷∏¡Ó±Ì */
+#define FLASH_ManufactDeviceID                  0x90
+#define FLASH_WriteEnable                       0x06
+#define FLASH_ReadStatusReg1                    0x05
+#define FLASH_ReadData                          0x03
+#define FLASH_PageProgram                       0x02
+#define FLASH_SectorErase                       0x20
+#define FLASH_DummyByte                         0xFF
+
 void w25q128_init(void);
 uint16_t w25q128_read_id(void);
 

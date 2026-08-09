@@ -61,12 +61,12 @@ uint16_t w25q128_read_id(void)
     uint16_t device_id = 0;
     W25Q128_CS(0);
     
-    w25q128_spi_swap_byte(0x90);
+    w25q128_spi_swap_byte(FLASH_ManufactDeviceID);
     w25q128_spi_swap_byte(0x00);
     w25q128_spi_swap_byte(0x00);
     w25q128_spi_swap_byte(0x00);
-    device_id = w25q128_spi_swap_byte(0xFF) << 8;
-    device_id |= w25q128_spi_swap_byte(0xFF);
+    device_id = w25q128_spi_swap_byte(FLASH_DummyByte) << 8;
+    device_id |= w25q128_spi_swap_byte(FLASH_DummyByte);
     
     W25Q128_CS(1);
     return device_id;
@@ -75,25 +75,65 @@ uint16_t w25q128_read_id(void)
 // 写使能
 void w25q128_write_enable(void)
 {
-
+    W25Q128_CS(0);
+    w25q128_spi_swap_byte(FLASH_WriteEnable);
+    W25Q128_CS(1);
 }
 
 // 读SR1
 uint8_t w25q128_read_sr1(void)
 {
+    uint8_t recv_data = 0;
     
+    W25Q128_CS(0);
+    
+    w25q128_spi_swap_byte(FLASH_ReadStatusReg1);
+    recv_data = w25q128_spi_swap_byte(FLASH_DummyByte);
+    
+    W25Q128_CS(1);
+    
+    return recv_data;
+}
+
+void w25q128_send_address(uint32_t address)
+{
+    w25q128_spi_swap_byte(address >> 16);
+    w25q128_spi_swap_byte(address >> 8);
+    w25q128_spi_swap_byte(address);
 }
 
 // 读数据
 void w25q128_read_data(uint32_t address, uint8_t *data, uint32_t size)
 {
-
+    uint32_t i = 0;
+    W25Q128_CS(0);
+    
+    w25q128_spi_swap_byte(FLASH_ReadData);
+    w25q128_spi_swap_byte(address);
+    
+    for (i = 0; i < size; i++)
+        data[i] = w25q128_spi_swap_byte(FLASH_DummyByte);
+    
+    W25Q128_CS(1);
 }
 
 // 页写
 void w25q128_write_page(uint32_t address, uint8_t *data, uint16_t size)
 {
-
+    uint16_t i = 0;
+    w25q128_write_enable();
+    
+    W25Q128_CS(0);
+    
+    w25q128_spi_swap_byte(FLASH_PageProgram);
+    w25q128_send_address(address);
+    
+    for (i = 0; i < size; i++)
+        w25q128_spi_swap_byte(data[i]);
+    
+    W25Q128_CS(1);
+    // 忙等待
+    
 }
 
 
