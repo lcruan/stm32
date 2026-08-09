@@ -153,6 +153,7 @@ void oled_fill(uint8_t data)
     }
 }
 
+// ÏÔÊ¾×Ö·û
 void oled_show_char(uint8_t x, uint8_t y, uint8_t num, uint8_t size)
 {
     uint8_t i, j, page;
@@ -179,6 +180,49 @@ void oled_show_char(uint8_t x, uint8_t y, uint8_t num, uint8_t size)
         
     }
 }
+
+// ÏÔÊ¾×Ö·û´®
+void oled_show_string(uint8_t x, uint8_t y, char *p, uint8_t size)
+{
+    while(*p != '\0')
+    {
+        oled_show_char(x, y, *p, size);
+        x += size/2;
+        p++;
+    }
+}
+
+// ÏÔÊ¾ÖĞÎÄ
+void oled_show_chinese(uint8_t x, uint8_t y, uint8_t N, uint8_t size)
+{
+    uint16_t i, j;
+    for(j = 0; j < size/8; j++)
+    {
+        oled_set_cursor(x, y + j);
+        for(i = size * j; i < size * (j + 1); i++)
+        {
+            if (size == 16)
+                oled_write_data(chinese_16x16[N][i]);
+            else if (size == 24)
+                oled_write_data(chinese_24x24[N][i]);
+        }  
+    }
+}
+
+// ÏÔÊ¾Í¼Ïñ
+void oled_show_image(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t *bmp)
+{
+    uint8_t i, j;
+    for (j = 0; j < height; j++)
+    {
+        oled_set_cursor(x, y + j);
+        for (i = 0; i < width; i++)
+            oled_write_data(bmp[width * j + i]);
+        
+    }
+}
+
+
 
 
 

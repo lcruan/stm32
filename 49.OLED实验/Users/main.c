@@ -4,6 +4,8 @@
 #include "uart1.h"
 #include "oled.h"
 
+extern const unsigned char shuai_data[];
+
 void led_init(void);                       /* LED初始化函数声明 */
 
 int main(void)
@@ -50,10 +52,20 @@ int main(void)
 //    oled_write_data(0x38);
 //    oled_write_data(0x20);
 
-      oled_show_char(0, 0, 'L', 24);
-      oled_show_char(12, 0, 'X', 24);
+//      oled_show_char(0, 0, 'L', 24);
+//      oled_show_char(12, 0, 'X', 24);
 //      oled_show_char(16, 0, '?', 16);
 //      oled_show_char(24, 0, '6', 16);
+
+    // 显示字符串
+    // oled_show_string(0, 2, "hello LX", 24);
+      
+      // 显示汉字
+//      uint8_t i;
+//      for(i = 0; i < 5; i++)
+//        oled_show_chinese(i*24, 0, i, 24);
+
+        oled_show_image(0, 0, 128, 8, (unsigned char *)shuai_data);
     
     while(1)
     { 
