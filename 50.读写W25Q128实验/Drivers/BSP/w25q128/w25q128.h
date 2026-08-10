@@ -16,6 +16,9 @@
 
 void w25q128_init(void);
 uint16_t w25q128_read_id(void);
+void w25q128_read_data(uint32_t address, uint8_t *data, uint32_t size);
+void w25q128_write_page(uint32_t address, uint8_t *data, uint16_t size);
+void w25q128_erase_sector(uint32_t address);
 
 #endif
 
