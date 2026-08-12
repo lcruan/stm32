@@ -3,11 +3,11 @@
 <title>Static Call Graph - [..\..\Output\stm32f103.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\stm32f103.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Aug 10 22:07:55 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Aug 11 21:31:46 2026
 <BR><P>
-<H3>Maximum Stack Usage =        184 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        176 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; w25q128_write_page &rArr; w25q128_wait_busy &rArr; w25q128_read_sr1 &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
+main &rArr; w25q128_read_data &rArr; w25q128_send_address &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 <P>
 <H3>
 Mutually Recursive functions
@@ -73,7 +73,7 @@ Global Symbols
 <P><STRONG><a name="[2e]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(.text)
 </UL>
-<P><STRONG><a name="[6d]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[68]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[30]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -83,17 +83,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[6e]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[69]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[6f]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[6a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[70]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[6b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[71]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[6c]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[72]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[6d]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[73]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[6e]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f101xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(RESET)
@@ -206,20 +206,20 @@ Global Symbols
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[74]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[6f]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[75]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[70]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[32]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[66]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<P><STRONG><a name="[64]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_rx_clear
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 </UL>
 
-<P><STRONG><a name="[76]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[71]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[34]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -238,19 +238,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[77]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[72]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[37]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[78]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[73]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[36]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[79]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[74]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f1xx_it.o(i.BusFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(RESET)
@@ -267,14 +267,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[5c]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_writ_enable
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_sr1
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led2_off
+<BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led2_off
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led1_off
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_write_page
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_id
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_erase_sector
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
 </UL>
 
 <P><STRONG><a name="[42]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_hal.o(i.HAL_GetTick))
@@ -383,7 +379,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_init
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_init
 </UL>
 
 <P><STRONG><a name="[4a]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, w25q128.o(i.HAL_SPI_MspInit))
@@ -402,7 +398,7 @@ Global Symbols
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
 </UL>
-<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
 </UL>
 
 <P><STRONG><a name="[3d]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config))
@@ -486,7 +482,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[7a]"></a>__1printf$5</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0printf$5), UNUSED)
+<P><STRONG><a name="[75]"></a>__1printf$5</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0printf$5), UNUSED)
 
 <P><STRONG><a name="[57]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0printf$5))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -495,11 +491,11 @@ Global Symbols
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[76]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[7c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[77]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[7d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[78]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[2f]"></a>fputc</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, uart1.o(i.fputc))
 <BR>[Address Reference Count : 1]<UL><LI> printf5.o(i.__0printf$5)
@@ -530,14 +526,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2c]"></a>main</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = main &rArr; w25q128_write_page &rArr; w25q128_wait_busy &rArr; w25q128_read_sr1 &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[2c]"></a>main</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = main &rArr; w25q128_read_data &rArr; w25q128_send_address &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_write_page
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_id
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_id
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_init
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_erase_sector
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_init
@@ -551,7 +545,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -567,36 +561,24 @@ Global Symbols
 <P><STRONG><a name="[58]"></a>uart1_rx_clear</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, uart1.o(i.uart1_rx_clear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uart1_rx_clear
 </UL>
-<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
-</UL>
-
-<P><STRONG><a name="[63]"></a>w25q128_erase_sector</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_erase_sector))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = w25q128_erase_sector &rArr; w25q128_wait_busy &rArr; w25q128_read_sr1 &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_writ_enable
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_wait_busy
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_send_address
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[61]"></a>w25q128_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = w25q128_init &rArr; w25q128_spi_init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_init
+<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[65]"></a>w25q128_read_data</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, w25q128.o(i.w25q128_read_data))
+<P><STRONG><a name="[63]"></a>w25q128_read_data</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, w25q128.o(i.w25q128_read_data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = w25q128_read_data &rArr; w25q128_send_address &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_send_address
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_send_address
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -605,32 +587,21 @@ Global Symbols
 <P><STRONG><a name="[62]"></a>w25q128_read_id</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_read_id))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = w25q128_read_id &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6c]"></a>w25q128_read_sr1</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_read_sr1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = w25q128_read_sr1 &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_wait_busy
-</UL>
-
-<P><STRONG><a name="[6a]"></a>w25q128_send_address</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_send_address))
+<P><STRONG><a name="[67]"></a>w25q128_send_address</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_send_address))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = w25q128_send_address &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_write_page
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_erase_sector
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
 </UL>
 
-<P><STRONG><a name="[6b]"></a>w25q128_spi_init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_spi_init))
+<P><STRONG><a name="[65]"></a>w25q128_spi_init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_spi_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = w25q128_spi_init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
@@ -638,49 +609,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_init
 </UL>
 
-<P><STRONG><a name="[69]"></a>w25q128_spi_swap_byte</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, w25q128.o(i.w25q128_spi_swap_byte))
+<P><STRONG><a name="[66]"></a>w25q128_spi_swap_byte</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, w25q128.o(i.w25q128_spi_swap_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_writ_enable
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_send_address
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_sr1
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_write_page
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_send_address
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_id
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_erase_sector
-</UL>
-
-<P><STRONG><a name="[68]"></a>w25q128_wait_busy</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_wait_busy))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = w25q128_wait_busy &rArr; w25q128_read_sr1 &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_sr1
-</UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_write_page
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_erase_sector
-</UL>
-
-<P><STRONG><a name="[67]"></a>w25q128_writ_enable</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, w25q128.o(i.w25q128_writ_enable))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = w25q128_writ_enable &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_write_page
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_erase_sector
-</UL>
-
-<P><STRONG><a name="[64]"></a>w25q128_write_page</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, w25q128.o(i.w25q128_write_page))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = w25q128_write_page &rArr; w25q128_wait_busy &rArr; w25q128_read_sr1 &rArr; w25q128_spi_swap_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_writ_enable
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_wait_busy
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_spi_swap_byte
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_send_address
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;w25q128_read_data
 </UL>
 <P>
 <H3>

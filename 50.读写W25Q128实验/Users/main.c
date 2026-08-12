@@ -22,9 +22,9 @@ int main(void)
     printf("device_id: %X\r\n", device_id);
     
     // ²Á³ı
-    w25q128_erase_sector(0x000000);
-    // Ğ´ÄÚÈİ
-    w25q128_write_page(0x000000, data_write, 4);
+//    w25q128_erase_sector(0x000000);
+//    // Ğ´ÄÚÈİ
+//    w25q128_write_page(0x000000, data_write, 4);
     // ¶Á
     w25q128_read_data(0x000000, data_read, 4);
     
