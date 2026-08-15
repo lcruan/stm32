@@ -4,12 +4,15 @@
 #include "keyboard.h"
 #include "string.h"
 #include "stdio.h"
+#include "lock.h"
+#include "beep.h"
+#include "delay.h"
 
 #define PASSWORD_SIZE   10
 
 uint8_t pwd_input[PASSWORD_SIZE] = {0}; // 通过矩阵键盘输入进来的
 uint8_t pwd_read[PASSWORD_SIZE] = {0};
-uint8_t i = 0, key_value = 0; // 定义数组索引
+uint8_t i = 0, key_value = 0, try_times = 0; // 定义数组索引
 
 // 初始化函数
 void password_init(void)
@@ -62,35 +65,91 @@ uint8_t password_get_input(void)
     }
 }
 
-// 密码比对
+// 密码比对 那输入的pwd_input密码和保存的w25q128的密码
 uint8_t password_compare(void)
 {
+    uint8_t i = 0;
+    
+    w25q128_read_data(0x000000, pwd_read, PASSWORD_SIZE);
+    
+    // 数组比对 pwd_input和pwd_read比对
+    if (strlen((char *)pwd_input) != strlen((char *)pwd_read)) // 比较长度
+        return FALSE;
+    
+    // 长度一样，比较每一位，循环
+    for (i = 0; i < strlen((char *)pwd_read); i++)
+    {
+        if (pwd_input[i] != pwd_read[i]) // 只要有一位不一样
+            return FALSE;
+    }
+    
+    return TRUE;
     
 }
 // 密码输入正确的操作
+// 锁打开，蜂鸣器响起来,oled显示密码正确
 void password_input_right_action(void)
 {
-
+    oled_show_right();
+    lock_on(); // 继电器闭合
+    beep_on();
+    delay_ms(300);
+    beep_off();
+    delay_ms(1000);
+    lock_off();
+    try_times = 0; // 密码输入正确设置为0，为了解决前两次错误，第三次正确
 }
 // 密码输入错误的操作
 void password_input_wrong_action(void)
 {
-
+    // 提示用户，密码输入错误
+    oled_show_wrong();
+    try_times++;
+    if (try_times >= 3)
+    {
+        beep_on();
+        delay_ms(1000);
+        beep_off();
+        try_times = 0;
+    }
+    // 刚开始输入错误，防止oled_show_wrong一闪而过，加延时
+    delay_ms(1000);
+    
 }
 // 旧密码输入正确的操作
 void password_old_right_action(void)
 {
-
+    // 显示请输入新密码
+    oled_show_new();
+    password_get_input();
+    // 保存新密码
+    password_save();
+    
+    // 蜂鸣器提示下用户
+    beep_on();
+    delay_ms(300);
+    beep_off();
+    delay_ms(500); // 目的为了上面oled_show_new停留时间长一点
 }
 // 旧密码输入错误的操作
 void password_old_wrong_action(void)
 {
-    
+    oled_show_wrong();
+    delay_ms(1000);
 }
 
 // 检查密码是否存在
 void password_check(void)
 {
- 
+    // 读取数据
+    w25q128_read_data(0x000000, pwd_read, PASSWORD_SIZE);
+    printf("读出密码：%s\r\n", pwd_read);
+    
+    if (pwd_read[0] == '\0' || pwd_read[0] == 0xFF)// 代表没有密码
+    {
+        oled_show_set();
+        password_get_input();
+        password_save();
+    }
 }
 

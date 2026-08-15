@@ -5,6 +5,8 @@
 
 #define POUND_KEY   '#'
 #define STAR_KEY    '*'
+#define TRUE         1
+#define FALSE        0
 
 
 #endif
