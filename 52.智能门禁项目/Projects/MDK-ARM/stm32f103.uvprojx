@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include;..\..\Drivers\STM32F1xx_HAL_Driver\Inc;..\..\Drivers\CMSIS\Include;..\..\Drivers;..\..\Users;..\..\Drivers\SYSTEM\delay;..\..\Drivers\SYSTEM\uart1;..\..\Drivers\SYSTEM\sys;..\..\Drivers\BSP\led;..\..\Drivers\BSP\beep;..\..\Drivers\BSP\keyboard;..\..\Drivers\BSP\lock;..\..\Drivers\BSP\oled;..\..\Drivers\BSP\w25q128</IncludePath>
+              <IncludePath>..\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include;..\..\Drivers\STM32F1xx_HAL_Driver\Inc;..\..\Drivers\CMSIS\Include;..\..\Drivers;..\..\Users;..\..\Drivers\SYSTEM\delay;..\..\Drivers\SYSTEM\uart1;..\..\Drivers\SYSTEM\sys;..\..\Drivers\BSP\led;..\..\Drivers\BSP\beep;..\..\Drivers\BSP\keyboard;..\..\Drivers\BSP\lock;..\..\Drivers\BSP\oled;..\..\Drivers\BSP\w25q128;..\..\Drivers\BSP\password</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -442,6 +442,11 @@
               <FileName>w25q128.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Drivers\BSP\w25q128\w25q128.c</FilePath>
+            </File>
+            <File>
+              <FileName>password.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\BSP\password\password.c</FilePath>
             </File>
           </Files>
         </Group>

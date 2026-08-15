@@ -9,6 +9,7 @@
 "..\..\output\lock.o"
 "..\..\output\oled.o"
 "..\..\output\w25q128.o"
+"..\..\output\password.o"
 "..\..\output\delay.o"
 "..\..\output\uart1.o"
 "..\..\output\sys.o"

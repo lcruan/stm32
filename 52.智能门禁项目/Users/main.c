@@ -20,7 +20,7 @@ int main(void)
     keyboard_init();
     lock_init();
     oled_init();
-    w25q128_init();
+//    w25q128_init();
     
     printf("hello world!\r\n");
     

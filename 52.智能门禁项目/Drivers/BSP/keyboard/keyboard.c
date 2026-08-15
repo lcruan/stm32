@@ -1,7 +1,7 @@
 #include "keyboard.h"
 #include "delay.h"
 
-uint8_t key_value = 0;
+static uint8_t key_value = 0;
 
 void keyboard_init(void)
 {
