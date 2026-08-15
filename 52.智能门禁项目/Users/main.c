@@ -24,6 +24,8 @@ int main(void)
     
     printf("hello world!\r\n");
     
+    oled_show_input();
+    
     while(1)
     { 
         led1_on();
