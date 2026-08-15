@@ -7,6 +7,7 @@
 #include "lock.h"
 #include "oled.h"
 #include "w25q128.h"
+#include "password.h"
 
 void led_init(void);                       /* LED初始化函数声明 */
 
@@ -20,20 +21,37 @@ int main(void)
     keyboard_init();
     lock_init();
     oled_init();
+    password_init();
 //    w25q128_init();
+    
+    password_check();
     
     printf("hello world!\r\n");
     
-    oled_show_input();
+//    oled_show_input();
     
+    uint8_t key_last = 0;
     while(1)
     { 
-        led1_on();
-        led2_off();
-        delay_ms(500);
-        led1_off();
-        led2_on();
-        delay_ms(500);
+        oled_show_input();
+        key_last = password_get_input();
+        if (key_last == POUND_KEY)
+        {
+            if (password_compare() == TRUE)
+                password_input_right_action();
+            else
+                password_input_wrong_action();
+        }
+        else  if (key_last == STAR_KEY) // * 修改密码
+        {
+            oled_show_old();
+            password_get_input();
+            if (password_compare() == TRUE)
+                password_old_right_action();
+            else
+                password_old_wrong_action();
+        }
+        
     }
 }
 

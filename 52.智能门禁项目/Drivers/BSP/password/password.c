@@ -48,6 +48,8 @@ uint8_t password_get_input(void)
         key_value = keyboard_get_value();
         if (key_value == POUND_KEY)
         {
+            // 关键：手动补字符串结束符
+            pwd_input[i] = '\0';
             printf("按下了#号键，input：%s\r\n", pwd_input);
             return POUND_KEY;
         }
@@ -58,9 +60,16 @@ uint8_t password_get_input(void)
         }
         else if (key_value != 0)
         {
-            printf("按下了：%c\r\n", key_value);
-            oled_show_char(20 + i * 10, 4, key_value, 16);
-            pwd_input[i++] = key_value;
+            // 防止溢出，最多输入PASSWORD_SIZE?1位，留一个位置给'\0'
+            if(i < PASSWORD_SIZE -1)
+            {
+                printf("按下了：%c\r\n", key_value);
+                oled_show_char(20 + i * 10, 4, key_value, 16);
+                pwd_input[i++] = key_value;
+            }
+//            printf("按下了：%c\r\n", key_value);
+//            oled_show_char(20 + i * 10, 4, key_value, 16);
+//            pwd_input[i++] = key_value;
         }
     }
 }
@@ -143,6 +152,7 @@ void password_check(void)
 {
     // 读取数据
     w25q128_read_data(0x000000, pwd_read, PASSWORD_SIZE);
+    pwd_read[PASSWORD_SIZE-1] = '\0';
     printf("读出密码：%s\r\n", pwd_read);
     
     if (pwd_read[0] == '\0' || pwd_read[0] == 0xFF)// 代表没有密码

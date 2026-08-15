@@ -61,3 +61,6 @@
 ..\..\output\password.o: ..\..\Drivers\BSP\keyboard\keyboard.h
 ..\..\output\password.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\..\output\password.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\password.o: ..\..\Drivers\BSP\lock\lock.h
+..\..\output\password.o: ..\..\Drivers\BSP\beep\beep.h
+..\..\output\password.o: ..\..\Drivers\SYSTEM\delay\delay.h

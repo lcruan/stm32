@@ -64,3 +64,4 @@
 ..\..\output\main.o: ..\..\Drivers\BSP\lock\lock.h
 ..\..\output\main.o: ..\..\Drivers\BSP\oled\oled.h
 ..\..\output\main.o: ..\..\Drivers\BSP\w25q128\w25q128.h
+..\..\output\main.o: ..\..\Drivers\BSP\password\password.h
