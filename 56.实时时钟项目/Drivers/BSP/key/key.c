@@ -8,7 +8,7 @@ void key_init(void)
     // 打开时钟
     __HAL_RCC_GPIOA_CLK_ENABLE();
     // 调用GPIO初始化函数
-    gpio_initstruct.Pin = GPIO_PIN_0 | GPIO_PIN_1;
+    gpio_initstruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3;
     gpio_initstruct.Mode = GPIO_MODE_INPUT;
     gpio_initstruct.Pull = GPIO_PULLUP;
     gpio_initstruct.Speed = GPIO_SPEED_FREQ_HIGH;
@@ -30,7 +30,7 @@ uint8_t key_scan(void)
             // 如果确实是按下状态，等待按键松开
              while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET);
             // 返回按键值
-             return 1;
+             return KEY_SET;
          }
 
      }
@@ -46,7 +46,39 @@ uint8_t key_scan(void)
             // 如果确实是按下状态，等待按键松开
              while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == GPIO_PIN_RESET);
             // 返回按键值
-             return 2;
+             return KEY_SHIFT;
+         }
+
+     }
+     
+     // 检测key3 - PA2
+     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_RESET)
+     {
+         // 消抖
+         delay_ms(10);
+         // 再次判断按键是否按下 GPIO_PIN_RESET低电平
+         if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_RESET)
+         {
+            // 如果确实是按下状态，等待按键松开
+             while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_RESET);
+            // 返回按键值
+             return KEY_UP;
+         }
+
+     }
+     
+      // 检测key4 - PA3
+     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_RESET)
+     {
+         // 消抖
+         delay_ms(10);
+         // 再次判断按键是否按下 GPIO_PIN_RESET低电平
+         if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_RESET)
+         {
+            // 如果确实是按下状态，等待按键松开
+             while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_RESET);
+            // 返回按键值
+             return KEY_DOWN;
          }
 
      }

@@ -60,7 +60,7 @@ void rtc_write_bkr(uint8_t bkrx, uint16_t data)
     HAL_RTCEx_BKUPWrite(&rtc_handle, bkrx, data);
 }
 
-void rtc_get_time(void)
+void rtc_get_time(uint8_t *time_data)
 {
     RTC_TimeTypeDef rtc_time = {0};
     RTC_DateTypeDef rtc_date = {0};
@@ -68,35 +68,43 @@ void rtc_get_time(void)
     HAL_RTC_GetTime(&rtc_handle, &rtc_time, RTC_FORMAT_BIN);
     HAL_RTC_GetDate(&rtc_handle, &rtc_date, RTC_FORMAT_BIN);
     
-    printf("rtc time: %d-%02d-%02d %02d:%02d:%02d\r\n", rtc_date.Year + 2000, rtc_date.Month, rtc_date.Date, 
-        rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
+    time_data[0] = rtc_date.Year;
+    time_data[1] = rtc_date.Month;
+    time_data[2] = rtc_date.Date;
+    time_data[3] = rtc_time.Hours;
+    time_data[4] = rtc_time.Minutes;
+    time_data[5] = rtc_time.Seconds;
+    
+//    printf("rtc time: %d-%02d-%02d %02d:%02d:%02d\r\n", rtc_date.Year + 2000, rtc_date.Month, rtc_date.Date, 
+//        rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
 }
 
-void rtc_set_time(struct tm time_data)
+void rtc_set_time(uint8_t *time_data)
 {
     RTC_TimeTypeDef rtc_time = {0};
     RTC_DateTypeDef rtc_date = {0};
     
-    rtc_time.Hours = time_data.tm_hour;
-    rtc_time.Minutes = time_data.tm_min;
-    rtc_time.Seconds = time_data.tm_sec;
+    rtc_time.Hours = time_data[3];
+    rtc_time.Minutes = time_data[4];
+    rtc_time.Seconds = time_data[5];
     HAL_RTC_SetTime(&rtc_handle, &rtc_time, RTC_FORMAT_BIN);
     
-    rtc_date.Year = time_data.tm_year - 2000;
-    rtc_date.Month = time_data.tm_mon;
-    rtc_date.Date = time_data.tm_mday;
+//    rtc_date.Year = time_data.tm_year - 2000
+    rtc_date.Year = time_data[0]; // uint8_t是2^8=256，如果+2000就溢出了
+    rtc_date.Month = time_data[1];
+    rtc_date.Date = time_data[2];
     HAL_RTC_SetDate(&rtc_handle, &rtc_date, RTC_FORMAT_BIN);
     
     while(!__HAL_RTC_ALARM_GET_FLAG(&rtc_handle, RTC_FLAG_RTOFF));
 }
 
-void rtc_set_alarm(struct tm alarm_data)
+void rtc_set_alarm(uint8_t *alarm_data)
 {
     RTC_AlarmTypeDef alarm = {0}; 
     alarm.Alarm = RTC_ALARM_A;
-    alarm.AlarmTime.Hours = alarm_data.tm_hour;
-    alarm.AlarmTime.Minutes = alarm_data.tm_min;
-    alarm.AlarmTime.Seconds = alarm_data.tm_sec;
+    alarm.AlarmTime.Hours = alarm_data[0];
+    alarm.AlarmTime.Minutes = alarm_data[1];
+    alarm.AlarmTime.Seconds = alarm_data[2];
     HAL_RTC_SetAlarm_IT(&rtc_handle, &alarm, RTC_FORMAT_BIN);
 }
 

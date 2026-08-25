@@ -3,6 +3,15 @@
 
 #include "sys.h"
 
+enum key_num
+{
+    KEY_SET = 1,
+    KEY_SHIFT,
+    KEY_UP,
+    KEY_DOWN
+};
+
+
 void delay_ms(uint32_t nms);            /* —” ±nms */
 void delay_us(uint32_t nus);            /* —” ±nus */
 void delay_s(uint32_t ns);              /* —” ±ns */

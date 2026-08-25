@@ -8,9 +8,9 @@
 void rtc_init(void);
 uint16_t rtc_read_bkr(uint8_t bkrx);
 void rtc_write_bkr(uint8_t bkrx, uint16_t data);
-void rtc_get_time(void);
-void rtc_set_time(struct tm time_data);
-void rtc_set_alarm(struct tm alarm_data);
+void rtc_get_time(uint8_t *time_data);
+void rtc_set_time(uint8_t *time_data);
+void rtc_set_alarm(uint8_t *alarm_data);
 
 
 #endif
