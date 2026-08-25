@@ -4,6 +4,10 @@
 "..\..\output\stm32f1xx_it.o"
 "..\..\output\system_stm32f1xx.o"
 "..\..\output\led.o"
+"..\..\output\beep.o"
+"..\..\output\key.o"
+"..\..\output\oled.o"
+"..\..\output\rtc.o"
 "..\..\output\delay.o"
 "..\..\output\uart1.o"
 "..\..\output\sys.o"
@@ -16,6 +20,9 @@
 "..\..\output\stm32f1xx_hal_usart.o"
 "..\..\output\stm32f1xx_hal_rcc.o"
 "..\..\output\stm32f1xx_hal_rcc_ex.o"
+"..\..\output\stm32f1xx_hal_rtc.o"
+"..\..\output\stm32f1xx_hal_rtc_ex.o"
+"..\..\output\stm32f1xx_hal_pwr.o"
 --library_type=microlib --strict --scatter "..\..\Output\stm32f103.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

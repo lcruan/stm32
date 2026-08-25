@@ -53,3 +53,4 @@ void led2_toggle(void)
 {
     HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_9);
 }
+
