@@ -211,121 +211,60 @@ void oled_show_string(uint8_t x, uint8_t y, char *p, uint8_t size)
 //    }
 //}
 
-void oled_show_chinese(uint8_t x, uint8_t y, uint8_t N, uint8_t message_type)
+void oled_show_chinese(uint8_t x, uint8_t y, uint8_t N)
 {
     uint16_t i, j;
     for (j = 0; j < 2; j++)
     {
         oled_set_cursor(x, y + j);
         for (i = 16 * j; i < 16 * (j + 1); i++)
-        {
-            switch(message_type)
-            {
-                case SHOW_INPUT_PWD:
-                    oled_write_data(chinese_enter_password[N][i]);
-                    break;
-                case SHOW_PWD_RIGHT:
-                    oled_write_data(chinese_password_right[N][i]);
-                    break;
-                case SHOW_PWD_WRONG:
-                    oled_write_data(chinese_password_wrong[N][i]);
-                    break;
-                case SHOW_INPUT_OLD_PWD:
-                    oled_write_data(chinese_enter_old_password[N][i]);
-                    break;
-                case SHOW_INPUT_NEW_PWD:
-                    oled_write_data(chinese_enter_new_password[N][i]);
-                    break;
-                case SHOW_PWD_CHANGED:
-                    oled_write_data(chinese_password_changed[N][i]);
-                    break;
-                case SHOW_SET_PWD:
-                    oled_write_data(chinese_set_password[N][i]);
-                    break;
-                default:
-                    break;
-            }
-        }
+            oled_write_data(chinese_time[N][i]);
     }
 }
 
-// 请输入密码
-void oled_show_input(void)
+void oled_show_init(void)
 {
+    // 清屏
     oled_fill(0x00);
-    oled_show_chinese(10, 1, 0, SHOW_INPUT_PWD);
-    oled_show_chinese(30, 1, 1, SHOW_INPUT_PWD);
-    oled_show_chinese(50, 1, 2, SHOW_INPUT_PWD);
-    oled_show_chinese(70, 1, 3, SHOW_INPUT_PWD);
-    oled_show_chinese(90, 1, 4, SHOW_INPUT_PWD);
-    oled_show_char(110, 1, ':', 16);
-}
-//密码正确
-void oled_show_right(void)
-{
-    oled_fill(0x00);
-    oled_show_chinese(20,1,0,SHOW_PWD_RIGHT);
-    oled_show_chinese(45,1,1,SHOW_PWD_RIGHT);
-    oled_show_chinese(70,1,2,SHOW_PWD_RIGHT);
-    oled_show_chinese(95,1,3,SHOW_PWD_RIGHT);
-}
-
-//密码错误
-void oled_show_wrong(void)
-{
-    oled_fill(0x00);
-    oled_show_chinese(20,1,0,SHOW_PWD_WRONG);
-    oled_show_chinese(45,1,1,SHOW_PWD_WRONG);
-    oled_show_chinese(70,1,2,SHOW_PWD_WRONG);
-    oled_show_chinese(95,1,3,SHOW_PWD_WRONG);
+    oled_show_string(8, 0, "2000", 16); // 2024
+    oled_show_chinese(40, 0, 0); // 年
+    oled_show_string(56, 0, "00", 16); // 07
+    oled_show_chinese(72, 0, 1); // 月
+    oled_show_string(88, 0, "00", 16); // 03
+    oled_show_chinese(104, 0, 2); // 日
+    
+    oled_show_string(26, 2, "00", 16);    //12
+    oled_show_char(45, 2, ':', 16);       //:
+    oled_show_string(56, 2, "00", 16);    //35
+    oled_show_char(75, 2, ':', 16);       //:
+    oled_show_string(86, 2, "00", 16);    //20
+    
+    oled_show_chinese(10, 4, 3);          //闹
+    oled_show_chinese(26, 4, 4);          //钟
+    oled_show_char(42, 4, ':', 16);       //:
+    
+    oled_show_string(26, 6, "00", 16);    //12
+    oled_show_char(45, 6, ':', 16);       //:
+    oled_show_string(56, 6, "00", 16);    //35
+    oled_show_char(75, 6, ':', 16);       //:
+    oled_show_string(86, 6, "00", 16);    //20
 }
 
-//请输入旧密码
-void oled_show_old(void)
+// 清空两个字符
+void oled_clear_2char(uint8_t x, uint8_t y)
 {
-    oled_fill(0x00);
-    oled_show_chinese(10,1,0,SHOW_INPUT_OLD_PWD);
-    oled_show_chinese(30,1,1,SHOW_INPUT_OLD_PWD);
-    oled_show_chinese(50,1,2,SHOW_INPUT_OLD_PWD);
-    oled_show_chinese(70,1,3,SHOW_INPUT_OLD_PWD);
-    oled_show_chinese(90,1,4,SHOW_INPUT_OLD_PWD);
-    oled_show_chinese(110,1,5,SHOW_INPUT_OLD_PWD);
-}
-
-//请输入新密码
-void oled_show_new(void)
-{
-    oled_fill(0x00);
-    oled_show_chinese(10,1,0,SHOW_INPUT_NEW_PWD);
-    oled_show_chinese(30,1,1,SHOW_INPUT_NEW_PWD);
-    oled_show_chinese(50,1,2,SHOW_INPUT_NEW_PWD);
-    oled_show_chinese(70,1,3,SHOW_INPUT_NEW_PWD);
-    oled_show_chinese(90,1,4,SHOW_INPUT_NEW_PWD);
-    oled_show_chinese(110,1,5,SHOW_INPUT_NEW_PWD);
-}
-
-//密码修改成功
-void oled_show_set(void)
-{
-    oled_fill(0x00);
-    oled_show_chinese(10,1,0,SHOW_SET_PWD);
-    oled_show_chinese(30,1,1,SHOW_SET_PWD);
-    oled_show_chinese(50,1,2,SHOW_SET_PWD);
-    oled_show_chinese(70,1,3,SHOW_SET_PWD);
-    oled_show_chinese(90,1,4,SHOW_SET_PWD);
-    oled_show_char(110,1,':',16);
-}
-
-//请设定密码
-void oled_show_changed(void)
-{
-    oled_fill(0x00);
-    oled_show_chinese(10,1,0,SHOW_PWD_CHANGED);
-    oled_show_chinese(30,1,1,SHOW_PWD_CHANGED);
-    oled_show_chinese(50,1,2,SHOW_PWD_CHANGED);
-    oled_show_chinese(70,1,3,SHOW_PWD_CHANGED);
-    oled_show_chinese(90,1,4,SHOW_PWD_CHANGED);
-    oled_show_chinese(110,1,5,SHOW_PWD_CHANGED);
+    uint8_t i = 0;
+    
+    // 清空上半部分
+    oled_set_cursor(x, y);
+    for (i = 0; i < 16; i++)
+        oled_write_data(0x00);
+    
+    // 清空下半部分
+    oled_set_cursor(x, y + 1);
+    for (i = 0; i < 16; i++)
+        oled_write_data(0x00);
+    
 }
 
 // 显示图像

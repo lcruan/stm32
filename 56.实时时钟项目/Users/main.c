@@ -22,6 +22,9 @@ int main(void)
     rtc_init();
     printf("hello world!\r\n");
     
+    oled_show_init();
+    oled_clear_2char(86, 2);
+    
     while(1)
     { 
 
