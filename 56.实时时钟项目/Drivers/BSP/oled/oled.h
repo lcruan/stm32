@@ -57,6 +57,7 @@ void oled_show_image(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_
 void oled_show_init(void);
 void oled_clear_2char(uint8_t x, uint8_t y);
 void oled_show_element(uint8_t num, uint8_t display_flag, uint8_t element);
+void oled_show_time_alarm(uint8_t *time, uint8_t *alarm);
 
 #endif
 

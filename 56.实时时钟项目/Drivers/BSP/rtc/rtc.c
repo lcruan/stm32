@@ -1,5 +1,6 @@
 #include "rtc.h"
 #include "stdio.h"
+#include "beep.h"
 
 
 RTC_HandleTypeDef rtc_handle = {0};
@@ -46,6 +47,7 @@ void RTC_Alarm_IRQHandler(void)
 void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
 {
     printf("ring ring ring...\r\n");
+    beep_on();
 }
 
 uint16_t rtc_read_bkr(uint8_t bkrx)

@@ -58,3 +58,4 @@
 ..\..\output\rtc.o: ..\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h
 ..\..\output\rtc.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 ..\..\output\rtc.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\rtc.o: ..\..\Drivers\BSP\beep\beep.h

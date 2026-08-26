@@ -22,13 +22,28 @@ int main(void)
     rtc_init();
     printf("hello world!\r\n");
     
+    uint8_t time_data[6] = {26, 8, 26, 23, 14, 30};
+    uint8_t alarm_data[6] = {23, 15, 00};
+    
     oled_show_init();
-//    oled_clear_2char(86, 2);
-    oled_show_element(16, ON, TIME_HOUR);
+    
+    if (rtc_read_bkr(1) != 0xA5A5)
+    {
+        rtc_write_bkr(1, 0xA5A5);
+        
+        rtc_set_time(time_data);
+        rtc_set_alarm(alarm_data);
+    }
     
     while(1)
     { 
-
+        // 获取时间及闹钟
+        rtc_get_time(time_data);
+        rtc_get_alarm(alarm_data);
+        // 在oled屏幕上显示
+        oled_show_time_alarm(time_data, alarm_data);
+        delay_ms(1000);
+        
     }
 }
 
