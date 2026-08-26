@@ -28,6 +28,22 @@ enum messge{
 #define OLED_SDA_RESET()        HAL_GPIO_WritePin(OLED_I2C_SDA_PORT, OLED_I2C_SDA_PIN,GPIO_PIN_RESET)
 #define OLED_SDA_SET()          HAL_GPIO_WritePin(OLED_I2C_SDA_PORT, OLED_I2C_SDA_PIN,GPIO_PIN_SET)
 
+#define ON      1
+#define OFF     0   
+
+enum elements
+{
+    TIME_YEAR = 0,
+    TIME_MONTH,
+    TIME_DAY,
+    TIME_HOUR,
+    TIME_MINUTE,
+    TIME_SECOND,
+    ALARM_HOUR,
+    ALARM_MINUTE,
+    ALARM_SECOND
+};
+
 
 void oled_init(void);
 void oled_write_cmd(uint8_t cmd);
@@ -40,6 +56,7 @@ void oled_show_chinese(uint8_t x, uint8_t y, uint8_t N);
 void oled_show_image(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t *bmp);
 void oled_show_init(void);
 void oled_clear_2char(uint8_t x, uint8_t y);
+void oled_show_element(uint8_t num, uint8_t display_flag, uint8_t element);
 
 #endif
 

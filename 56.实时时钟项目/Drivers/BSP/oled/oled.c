@@ -250,7 +250,7 @@ void oled_show_init(void)
     oled_show_string(86, 6, "00", 16);    //20
 }
 
-// 清空两个字符
+// 清空某个位置的两个字符
 void oled_clear_2char(uint8_t x, uint8_t y)
 {
     uint8_t i = 0;
@@ -264,7 +264,149 @@ void oled_clear_2char(uint8_t x, uint8_t y)
     oled_set_cursor(x, y + 1);
     for (i = 0; i < 16; i++)
         oled_write_data(0x00);
-    
+}
+
+// 封装年坑位
+void oled_show_year(uint8_t num, uint8_t display_flag)
+{
+    if (display_flag)
+    {
+        // 显示年份的坑位 num/10=2  num%10=4
+        oled_show_char(24, 0, num/10 + '0', 16);
+        oled_show_char(32, 0, num%10 + '0', 16);
+    }
+    else
+    {
+        // 不显示年份的坑位
+        oled_clear_2char(24, 0);
+    }   
+}
+
+//月
+void oled_show_month(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(56, 0, num/10 + '0', 16);
+        oled_show_char(64, 0, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(56, 0);
+}
+
+//日
+void oled_show_day(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(88, 0, num/10 + '0', 16);
+        oled_show_char(96, 0, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(88, 0);
+}
+
+//时
+void oled_show_hour(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(26, 2, num/10 + '0', 16);
+        oled_show_char(34, 2, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(26, 2);
+}
+
+//分
+void oled_show_minute(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(56, 2, num/10 + '0', 16);
+        oled_show_char(64, 2, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(56, 2);
+}
+
+//秒
+void oled_show_second(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(86, 2, num/10 + '0', 16);
+        oled_show_char(94, 2, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(86, 2);
+}
+
+//闹钟：时
+void oled_show_alarm_hour(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(26, 6, num/10 + '0', 16);
+        oled_show_char(34, 6, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(26, 6);
+}
+
+//闹钟：分
+void oled_show_alarm_minute(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(56, 6, num/10 + '0', 16);
+        oled_show_char(64, 6, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(56, 6);
+}
+
+//闹钟：秒
+void oled_show_alarm_second(uint8_t num, uint8_t display_flag)
+{
+    if(display_flag)
+    {
+        oled_show_char(86, 6, num/10 + '0', 16);
+        oled_show_char(94, 6, num%10 + '0', 16);
+    }
+    else
+        oled_clear_2char(86, 6);
+}
+
+// 指定是哪个坑位
+void oled_show_element(uint8_t num, uint8_t display_flag, uint8_t element)
+{
+    switch(element)
+    {
+        case TIME_YEAR: oled_show_year(num, display_flag); break;
+        case TIME_MONTH: oled_show_month(num, display_flag); break;
+        case TIME_DAY: oled_show_day(num, display_flag); break;
+        case TIME_HOUR: oled_show_hour(num, display_flag); break;
+        case TIME_MINUTE: oled_show_minute(num, display_flag); break;
+        case TIME_SECOND: oled_show_second(num, display_flag); break;
+        case ALARM_HOUR: oled_show_alarm_hour(num, display_flag); break;
+        case ALARM_MINUTE: oled_show_alarm_minute(num, display_flag); break;
+        case ALARM_SECOND: oled_show_alarm_second(num, display_flag); break;
+        default : break;
+    }
+}
+
+void oled_show_time_alarm(uint8_t *time, uint8_t *alarm)
+{
+    oled_show_year(time[0], 1);
+    oled_show_month(time[1], 1);
+    oled_show_day(time[2], 1);
+    oled_show_hour(time[3], 1);
+    oled_show_minute(time[4], 1);
+    oled_show_second(time[5], 1);
+    oled_show_alarm_hour(alarm[0], 1);
+    oled_show_alarm_minute(alarm[1], 1);
+    oled_show_alarm_second(alarm[2], 1);
 }
 
 // 显示图像

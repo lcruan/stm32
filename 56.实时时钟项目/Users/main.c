@@ -23,7 +23,8 @@ int main(void)
     printf("hello world!\r\n");
     
     oled_show_init();
-    oled_clear_2char(86, 2);
+//    oled_clear_2char(86, 2);
+    oled_show_element(16, ON, TIME_HOUR);
     
     while(1)
     { 
