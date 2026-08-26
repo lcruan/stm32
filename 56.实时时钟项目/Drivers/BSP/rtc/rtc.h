@@ -11,6 +11,7 @@ void rtc_write_bkr(uint8_t bkrx, uint16_t data);
 void rtc_get_time(uint8_t *time_data);
 void rtc_set_time(uint8_t *time_data);
 void rtc_set_alarm(uint8_t *alarm_data);
+void rtc_get_alarm(uint8_t *alarm_data);
 
 
 #endif

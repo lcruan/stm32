@@ -98,6 +98,17 @@ void rtc_set_time(uint8_t *time_data)
     while(!__HAL_RTC_ALARM_GET_FLAG(&rtc_handle, RTC_FLAG_RTOFF));
 }
 
+void rtc_get_alarm(uint8_t *alarm_data)
+{
+    RTC_AlarmTypeDef alarm = {0}; 
+    HAL_RTC_GetAlarm(&rtc_handle, &alarm, RTC_ALARM_A, RTC_FORMAT_BIN);
+    
+    alarm_data[0] = alarm.AlarmTime.Hours;
+    alarm_data[1] = alarm.AlarmTime.Minutes;
+    alarm_data[2] = alarm.AlarmTime.Seconds;
+    
+}
+
 void rtc_set_alarm(uint8_t *alarm_data)
 {
     RTC_AlarmTypeDef alarm = {0}; 
