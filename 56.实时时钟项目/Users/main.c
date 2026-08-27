@@ -78,10 +78,32 @@ int main(void)
                             
                             case KEY_UP:
                                 // 增加数值
+                                // 分和秒，不能超过60
+                                if (set_time_shift == TIME_SECOND || set_time_shift == TIME_MINUTE)
+                                    if (time_data[set_time_shift] < 59)
+                                        time_data[set_time_shift]++;
+                                    
+                                if (set_time_shift == TIME_HOUR) // 小时
+                                    if (time_data[set_time_shift] < 23)
+                                        time_data[set_time_shift]++;
+                                    
+                                if (set_time_shift == TIME_DAY) // 日
+                                    if (time_data[set_time_shift] < 31)
+                                        time_data[set_time_shift]++;
+                                    
+                                if (set_time_shift == TIME_MONTH) // 月
+                                    if (time_data[set_time_shift] < 12)
+                                        time_data[set_time_shift]++;
+                                    
+                                if (set_time_shift == TIME_YEAR) // 年
+                                    if (time_data[set_time_shift] < 99)
+                                        time_data[set_time_shift]++;
                                 break;
                             
                             case KEY_DOWN:
                                 // 减少数值
+                                if (time_data[set_time_shift] > 0)
+                                    time_data[set_time_shift]--;
                                 break;
 
                             default: 
