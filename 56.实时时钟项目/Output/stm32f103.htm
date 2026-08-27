@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\..\Output\stm32f103.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\stm32f103.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Aug 26 23:14:37 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Aug 27 22:06:38 2026
 <BR><P>
 <H3>Maximum Stack Usage =        176 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -73,7 +73,7 @@ Global Symbols
 <P><STRONG><a name="[2e]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(.text)
 </UL>
-<P><STRONG><a name="[97]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[9a]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[30]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -83,17 +83,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[98]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[9b]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[99]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[9c]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[9a]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[9d]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[9b]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[9e]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[9c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[9f]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[9d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[a0]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f101xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(RESET)
@@ -203,9 +203,9 @@ Global Symbols
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[9e]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[a1]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[9f]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[a2]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[32]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -213,11 +213,11 @@ Global Symbols
 
 <P><STRONG><a name="[5a]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_MspInit
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_rx_clear
 </UL>
 
-<P><STRONG><a name="[a0]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[a3]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[34]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -229,7 +229,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[a1]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[a4]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f1xx_it.o(i.BusFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f101xb.o(RESET)
@@ -240,17 +240,21 @@ Global Symbols
 <P><STRONG><a name="[64]"></a>HAL_GPIO_Init</STRONG> (Thumb, 766 bytes, Stack size 36 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_gpio_init
+<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_gpio_init
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_init
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_init
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 
+<P><STRONG><a name="[73]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
+</UL>
+
 <P><STRONG><a name="[6e]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_write_byte
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_stop
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_start
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_ack
+<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_write_byte
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_stop
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_start
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_ack
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_on
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_off
 </UL>
@@ -314,8 +318,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[94]"></a>HAL_PWR_EnableBkUpAccess</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f1xx_hal_pwr.o(i.HAL_PWR_EnableBkUpAccess))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
+<P><STRONG><a name="[97]"></a>HAL_PWR_EnableBkUpAccess</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f1xx_hal_pwr.o(i.HAL_PWR_EnableBkUpAccess))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
 </UL>
 
 <P><STRONG><a name="[3e]"></a>HAL_RCCEx_GetPeriphCLKFreq</STRONG> (Thumb, 232 bytes, Stack size 32 bytes, stm32f1xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq))
@@ -341,7 +345,7 @@ Global Symbols
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 </UL>
 
 <P><STRONG><a name="[45]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq))
@@ -379,19 +383,19 @@ Global Symbols
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_MspInit
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 </UL>
 
-<P><STRONG><a name="[95]"></a>HAL_RTCEx_BKUPRead</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f1xx_hal_rtc_ex.o(i.HAL_RTCEx_BKUPRead))
+<P><STRONG><a name="[98]"></a>HAL_RTCEx_BKUPRead</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f1xx_hal_rtc_ex.o(i.HAL_RTCEx_BKUPRead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_RTCEx_BKUPRead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_read_bkr
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_read_bkr
 </UL>
 
-<P><STRONG><a name="[96]"></a>HAL_RTCEx_BKUPWrite</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32f1xx_hal_rtc_ex.o(i.HAL_RTCEx_BKUPWrite))
+<P><STRONG><a name="[99]"></a>HAL_RTCEx_BKUPWrite</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, stm32f1xx_hal_rtc_ex.o(i.HAL_RTCEx_BKUPWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_RTCEx_BKUPWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_write_bkr
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_write_bkr
 </UL>
 
 <P><STRONG><a name="[48]"></a>HAL_RTC_AlarmAEventCallback</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, rtc.o(i.HAL_RTC_AlarmAEventCallback))
@@ -417,7 +421,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ReadAlarmCounter
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ByteToBcd2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_alarm
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_alarm
 </UL>
 
 <P><STRONG><a name="[4f]"></a>HAL_RTC_GetDate</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, stm32f1xx_hal_rtc.o(i.HAL_RTC_GetDate))
@@ -426,7 +430,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetTime
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ByteToBcd2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_time
+<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_time
 </UL>
 
 <P><STRONG><a name="[50]"></a>HAL_RTC_GetTime</STRONG> (Thumb, 260 bytes, Stack size 32 bytes, stm32f1xx_hal_rtc.o(i.HAL_RTC_GetTime))
@@ -441,7 +445,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetAlarm_IT
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetDate
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_time
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_time
 </UL>
 
 <P><STRONG><a name="[55]"></a>HAL_RTC_Init</STRONG> (Thumb, 188 bytes, Stack size 16 bytes, stm32f1xx_hal_rtc.o(i.HAL_RTC_Init))
@@ -453,7 +457,7 @@ Global Symbols
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterInitMode
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_GetPeriphCLKFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
 </UL>
 
 <P><STRONG><a name="[56]"></a>HAL_RTC_MspInit</STRONG> (Thumb, 82 bytes, Stack size 64 bytes, rtc.o(i.HAL_RTC_MspInit))
@@ -475,7 +479,7 @@ Global Symbols
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WriteAlarmCounter
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Bcd2ToByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_alarm
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_alarm
 </UL>
 
 <P><STRONG><a name="[5e]"></a>HAL_RTC_SetDate</STRONG> (Thumb, 242 bytes, Stack size 32 bytes, stm32f1xx_hal_rtc.o(i.HAL_RTC_SetDate))
@@ -488,7 +492,7 @@ Global Symbols
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ReadAlarmCounter
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Bcd2ToByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_time
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_time
 </UL>
 
 <P><STRONG><a name="[60]"></a>HAL_RTC_SetTime</STRONG> (Thumb, 214 bytes, Stack size 32 bytes, stm32f1xx_hal_rtc.o(i.HAL_RTC_SetTime))
@@ -499,7 +503,7 @@ Global Symbols
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ReadAlarmCounter
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Bcd2ToByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_time
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_time
 </UL>
 
 <P><STRONG><a name="[57]"></a>HAL_RTC_WaitForSynchro</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, stm32f1xx_hal_rtc.o(i.HAL_RTC_WaitForSynchro))
@@ -524,7 +528,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 </UL>
 
 <P><STRONG><a name="[62]"></a>HAL_UART_MspInit</STRONG> (Thumb, 154 bytes, Stack size 32 bytes, uart1.o(i.HAL_UART_MspInit))
@@ -594,7 +598,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[a2]"></a>__1printf$2</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf2.o(i.__0printf$2), UNUSED)
+<P><STRONG><a name="[a5]"></a>__1printf$2</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf2.o(i.__0printf$2), UNUSED)
 
 <P><STRONG><a name="[49]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf2.o(i.__0printf$2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -604,17 +608,17 @@ Global Symbols
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[a3]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[a6]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[a4]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[a7]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[a5]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[a8]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[6c]"></a>beep_init</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, beep.o(i.beep_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = beep_init &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_off
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_off
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -625,6 +629,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_init
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[4a]"></a>beep_on</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, beep.o(i.beep_on))
@@ -640,7 +645,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -659,293 +665,330 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2c]"></a>main</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, main.o(i.main))
+<P><STRONG><a name="[72]"></a>key_scan</STRONG> (Thumb, 182 bytes, Stack size 8 bytes, key.o(i.key_scan))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = key_scan &rArr; delay_ms
+</UL>
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[2c]"></a>main</STRONG> (Thumb, 264 bytes, Stack size 24 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = main &rArr; stm32_clock_init &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_write_bkr
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_time
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_alarm
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_read_bkr
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_time
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_alarm
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_write_bkr
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_time
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_set_alarm
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_read_bkr
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_time
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_alarm
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_init
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_off
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_init
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[7e]"></a>oled_clear_2char</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, oled.o(i.oled_clear_2char))
+<P><STRONG><a name="[81]"></a>oled_clear_2char</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, oled.o(i.oled_clear_2char))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = oled_clear_2char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_year
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_second
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_month
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_minute
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_hour
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_day
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_second
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_minute
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_hour
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_year
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_second
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_month
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_minute
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_hour
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_day
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_second
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_minute
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_hour
 </UL>
 
-<P><STRONG><a name="[81]"></a>oled_fill</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, oled.o(i.oled_fill))
+<P><STRONG><a name="[84]"></a>oled_fill</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, oled.o(i.oled_fill))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = oled_fill &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
 </UL>
 
-<P><STRONG><a name="[82]"></a>oled_gpio_init</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, oled.o(i.oled_gpio_init))
+<P><STRONG><a name="[85]"></a>oled_gpio_init</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, oled.o(i.oled_gpio_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = oled_gpio_init &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
 </UL>
 
-<P><STRONG><a name="[83]"></a>oled_i2c_ack</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, oled.o(i.oled_i2c_ack))
+<P><STRONG><a name="[86]"></a>oled_i2c_ack</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, oled.o(i.oled_i2c_ack))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = oled_i2c_ack
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
 </UL>
 
-<P><STRONG><a name="[84]"></a>oled_i2c_start</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, oled.o(i.oled_i2c_start))
+<P><STRONG><a name="[87]"></a>oled_i2c_start</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, oled.o(i.oled_i2c_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = oled_i2c_start
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
 </UL>
 
-<P><STRONG><a name="[85]"></a>oled_i2c_stop</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, oled.o(i.oled_i2c_stop))
+<P><STRONG><a name="[88]"></a>oled_i2c_stop</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, oled.o(i.oled_i2c_stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = oled_i2c_stop
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
 </UL>
 
-<P><STRONG><a name="[86]"></a>oled_i2c_write_byte</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, oled.o(i.oled_i2c_write_byte))
+<P><STRONG><a name="[89]"></a>oled_i2c_write_byte</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, oled.o(i.oled_i2c_write_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = oled_i2c_write_byte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
 </UL>
 
-<P><STRONG><a name="[74]"></a>oled_init</STRONG> (Thumb, 158 bytes, Stack size 8 bytes, oled.o(i.oled_init))
+<P><STRONG><a name="[76]"></a>oled_init</STRONG> (Thumb, 158 bytes, Stack size 8 bytes, oled.o(i.oled_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = oled_init &rArr; oled_gpio_init &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_gpio_init
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_gpio_init
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7f]"></a>oled_set_cursor</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, oled.o(i.oled_set_cursor))
+<P><STRONG><a name="[82]"></a>oled_set_cursor</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, oled.o(i.oled_set_cursor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_chinese
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_chinese
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
 
-<P><STRONG><a name="[88]"></a>oled_show_alarm_hour</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_alarm_hour))
+<P><STRONG><a name="[8b]"></a>oled_show_alarm_hour</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_alarm_hour))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_alarm_hour &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[8a]"></a>oled_show_alarm_minute</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_alarm_minute))
+<P><STRONG><a name="[8d]"></a>oled_show_alarm_minute</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_alarm_minute))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_alarm_minute &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[8b]"></a>oled_show_alarm_second</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_alarm_second))
+<P><STRONG><a name="[8e]"></a>oled_show_alarm_second</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_alarm_second))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_alarm_second &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[89]"></a>oled_show_char</STRONG> (Thumb, 172 bytes, Stack size 32 bytes, oled.o(i.oled_show_char))
+<P><STRONG><a name="[8c]"></a>oled_show_char</STRONG> (Thumb, 172 bytes, Stack size 32 bytes, oled.o(i.oled_show_char))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_year
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_string
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_second
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_month
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_minute
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_hour
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_day
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_second
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_minute
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_hour
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_year
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_string
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_second
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_month
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_minute
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_hour
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_day
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_second
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_minute
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_hour
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
 </UL>
 
-<P><STRONG><a name="[8c]"></a>oled_show_chinese</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, oled.o(i.oled_show_chinese))
+<P><STRONG><a name="[8f]"></a>oled_show_chinese</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, oled.o(i.oled_show_chinese))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = oled_show_chinese &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_write_data
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
 </UL>
 
-<P><STRONG><a name="[8d]"></a>oled_show_day</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_day))
+<P><STRONG><a name="[90]"></a>oled_show_day</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_day))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_day &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[8e]"></a>oled_show_hour</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_hour))
+<P><STRONG><a name="[80]"></a>oled_show_element</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, oled.o(i.oled_show_element))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = oled_show_element &rArr; oled_show_year &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_year
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_second
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_month
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_minute
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_hour
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_day
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_second
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_minute
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_hour
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[93]"></a>oled_show_hour</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_hour))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_hour &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[76]"></a>oled_show_init</STRONG> (Thumb, 228 bytes, Stack size 8 bytes, oled.o(i.oled_show_init))
+<P><STRONG><a name="[78]"></a>oled_show_init</STRONG> (Thumb, 228 bytes, Stack size 8 bytes, oled.o(i.oled_show_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = oled_show_init &rArr; oled_show_string &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_string
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_chinese
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_string
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_chinese
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[90]"></a>oled_show_minute</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_minute))
+<P><STRONG><a name="[94]"></a>oled_show_minute</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_minute))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_minute &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[91]"></a>oled_show_month</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_month))
+<P><STRONG><a name="[92]"></a>oled_show_month</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_month))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_month &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[92]"></a>oled_show_second</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_second))
+<P><STRONG><a name="[95]"></a>oled_show_second</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_second))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_second &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[8f]"></a>oled_show_string</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, oled.o(i.oled_show_string))
+<P><STRONG><a name="[96]"></a>oled_show_string</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, oled.o(i.oled_show_string))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = oled_show_string &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_init
 </UL>
 
-<P><STRONG><a name="[7d]"></a>oled_show_time_alarm</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, oled.o(i.oled_show_time_alarm))
+<P><STRONG><a name="[7f]"></a>oled_show_time_alarm</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, oled.o(i.oled_show_time_alarm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = oled_show_time_alarm &rArr; oled_show_year &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_year
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_second
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_month
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_minute
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_hour
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_day
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_second
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_minute
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_hour
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_year
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_second
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_month
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_minute
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_hour
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_day
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_second
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_minute
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_alarm_hour
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[93]"></a>oled_show_year</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_year))
+<P><STRONG><a name="[91]"></a>oled_show_year</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, oled.o(i.oled_show_year))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = oled_show_year &rArr; oled_show_char &rArr; oled_set_cursor &rArr; oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_time_alarm
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_element
 </UL>
 
-<P><STRONG><a name="[87]"></a>oled_write_cmd</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, oled.o(i.oled_write_cmd))
+<P><STRONG><a name="[8a]"></a>oled_write_cmd</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, oled.o(i.oled_write_cmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = oled_write_cmd &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_write_byte
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_stop
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_start
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_ack
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_write_byte
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_stop
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_start
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_ack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_set_cursor
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_init
 </UL>
 
-<P><STRONG><a name="[80]"></a>oled_write_data</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, oled.o(i.oled_write_data))
+<P><STRONG><a name="[83]"></a>oled_write_data</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, oled.o(i.oled_write_data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = oled_write_data &rArr; oled_i2c_write_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_write_byte
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_stop
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_start
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_ack
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_write_byte
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_stop
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_start
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_i2c_ack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_chinese
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_chinese
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show_char
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_fill
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_clear_2char
 </UL>
 
-<P><STRONG><a name="[7c]"></a>rtc_get_alarm</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, rtc.o(i.rtc_get_alarm))
+<P><STRONG><a name="[7e]"></a>rtc_get_alarm</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, rtc.o(i.rtc_get_alarm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = rtc_get_alarm &rArr; HAL_RTC_GetAlarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetAlarm
@@ -953,7 +996,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7b]"></a>rtc_get_time</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, rtc.o(i.rtc_get_time))
+<P><STRONG><a name="[7d]"></a>rtc_get_time</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, rtc.o(i.rtc_get_time))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = rtc_get_time &rArr; HAL_RTC_GetDate &rArr; HAL_RTC_GetTime &rArr; RTC_DateUpdate &rArr; RTC_WeekDayNum
 </UL>
 <BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetTime
@@ -962,24 +1005,24 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[75]"></a>rtc_init</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, rtc.o(i.rtc_init))
+<P><STRONG><a name="[77]"></a>rtc_init</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, rtc.o(i.rtc_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = rtc_init &rArr; HAL_RTC_Init &rArr; HAL_RTC_MspInit &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_Init
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_EnableBkUpAccess
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_EnableBkUpAccess
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[77]"></a>rtc_read_bkr</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, rtc.o(i.rtc_read_bkr))
+<P><STRONG><a name="[79]"></a>rtc_read_bkr</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, rtc.o(i.rtc_read_bkr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = rtc_read_bkr &rArr; HAL_RTCEx_BKUPRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTCEx_BKUPRead
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTCEx_BKUPRead
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7a]"></a>rtc_set_alarm</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, rtc.o(i.rtc_set_alarm))
+<P><STRONG><a name="[7c]"></a>rtc_set_alarm</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, rtc.o(i.rtc_set_alarm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = rtc_set_alarm &rArr; HAL_RTC_SetAlarm_IT &rArr; HAL_RTC_GetTime &rArr; RTC_DateUpdate &rArr; RTC_WeekDayNum
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetAlarm_IT
@@ -987,7 +1030,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[79]"></a>rtc_set_time</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, rtc.o(i.rtc_set_time))
+<P><STRONG><a name="[7b]"></a>rtc_set_time</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, rtc.o(i.rtc_set_time))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = rtc_set_time &rArr; HAL_RTC_SetDate &rArr; RTC_WriteTimeCounter &rArr; RTC_ExitInitMode
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetDate
@@ -996,15 +1039,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[78]"></a>rtc_write_bkr</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, rtc.o(i.rtc_write_bkr))
+<P><STRONG><a name="[7a]"></a>rtc_write_bkr</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, rtc.o(i.rtc_write_bkr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = rtc_write_bkr &rArr; HAL_RTCEx_BKUPWrite
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTCEx_BKUPWrite
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTCEx_BKUPWrite
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[72]"></a>stm32_clock_init</STRONG> (Thumb, 102 bytes, Stack size 72 bytes, sys.o(i.stm32_clock_init))
+<P><STRONG><a name="[74]"></a>stm32_clock_init</STRONG> (Thumb, 102 bytes, Stack size 72 bytes, sys.o(i.stm32_clock_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = stm32_clock_init &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
@@ -1014,7 +1057,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[73]"></a>uart1_init</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, uart1.o(i.uart1_init))
+<P><STRONG><a name="[75]"></a>uart1_init</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, uart1.o(i.uart1_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = uart1_init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init

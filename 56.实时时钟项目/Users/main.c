@@ -24,6 +24,9 @@ int main(void)
     
     uint8_t time_data[6] = {26, 8, 26, 23, 14, 30};
     uint8_t alarm_data[6] = {23, 15, 00};
+    uint8_t set_time_shift = TIME_SECOND;
+    uint8_t set_alarm_shift = ALARM_SECOND;
+    uint8_t set_time_flag = 0, set_alarm_flag = 0;
     
     oled_show_init();
     
@@ -42,7 +45,67 @@ int main(void)
         rtc_get_alarm(alarm_data);
         // 在oled屏幕上显示
         oled_show_time_alarm(time_data, alarm_data);
-        delay_ms(1000);
+        
+        switch(key_scan())
+        {
+            case KEY_SET:
+                // 按键1按下，进入时间设置模式
+                set_time_flag = 1;
+                while(set_time_flag)
+                {
+                    // 闪动要修改的坑位
+                    // 先闪动秒
+                    oled_show_element(time_data[set_time_shift], OFF, set_time_shift);
+                    delay_ms(100);
+                    oled_show_element(time_data[set_time_shift], ON, set_time_shift);
+                    delay_ms(100);
+                    
+                       // 闪动的状态下，按下按键的不同状态处理
+                       switch(key_scan())
+                        {
+                            case KEY_SET:
+                                // 退出时间设置模式
+                                set_time_flag = 0;
+                                // 保存修改后的时间
+                                rtc_set_time(time_data);
+                                break;
+                            
+                            case KEY_SHIFT:
+                                // 跳转到下一个需要修改的元素（秒 分 时 日 月 年）
+                                if (set_time_shift-- <= TIME_YEAR) // 是枚举，--相当于移动位置
+                                    set_time_shift = TIME_SECOND;
+                                break;
+                            
+                            case KEY_UP:
+                                // 增加数值
+                                break;
+                            
+                            case KEY_DOWN:
+                                // 减少数值
+                                break;
+
+                            default: 
+                                break;
+                        }
+                }
+                break;
+            
+            case KEY_SHIFT:
+                // 按键2按下，进入闹钟设置模式
+                break;
+            
+            case KEY_UP:
+            case KEY_DOWN:
+                // 按键4/3按下，停止蜂鸣器
+                beep_off();
+                break;
+            
+            default: 
+                break;
+        }
+        
+        
+//        delay_ms(1000);
         
     }
 }
