@@ -66,6 +66,7 @@ int main(void)
                             case KEY_SET:
                                 // 退出时间设置模式
                                 set_time_flag = 0;
+                                set_time_shift = TIME_SECOND;
                                 // 保存修改后的时间
                                 rtc_set_time(time_data);
                                 break;
@@ -114,6 +115,47 @@ int main(void)
             
             case KEY_SHIFT:
                 // 按键2按下，进入闹钟设置模式
+                set_alarm_flag = 1;
+                while(set_alarm_flag)
+                {
+                    // 闪动要修改的坑位
+                    // 先闪动秒
+                    oled_show_element(alarm_data[set_alarm_shift - ALARM_HOUR], OFF, set_alarm_shift);
+                    delay_ms(100);
+                    oled_show_element(alarm_data[set_alarm_shift - ALARM_HOUR], ON, set_alarm_shift);
+                    delay_ms(100);
+                    switch(key_scan())
+                    {
+                        case KEY_SET:
+                            // 退出闹钟设置模式
+                            set_alarm_flag = 0;
+                            set_alarm_shift = ALARM_SECOND;
+                            // 保存修改后的闹钟
+                            rtc_set_alarm(alarm_data);
+                            break;
+                        
+                        case KEY_SHIFT:
+                            // 跳转到下一个需要修改的元素（秒 分 时 日 月 年）
+                            if (set_alarm_shift-- <= ALARM_HOUR) // 是枚举，--相当于移动位置
+                                set_alarm_shift = ALARM_SECOND;
+                            break;
+                        
+                        case KEY_UP:
+                            // 增加数值
+                            if (alarm_data[set_alarm_shift - ALARM_HOUR] < 59)
+                                alarm_data[set_alarm_shift - ALARM_HOUR]++;
+                            break;
+                        
+                        case KEY_DOWN:
+                            // 减少数值
+                            if (alarm_data[set_alarm_shift - ALARM_HOUR] > 0)
+                                alarm_data[set_alarm_shift - ALARM_HOUR]--;
+                            break;
+
+                        default: 
+                            break;
+                    }
+                }
                 break;
             
             case KEY_UP:
