@@ -23,7 +23,9 @@ int main(void)
     { 
         if (key_scan() == 2)
         {
-            lpwr_enter_sleep();
+//            lpwr_enter_sleep();
+//              lpwr_enter_stop();
+            lpwr_enter_standby();
         }
         
         if ((i % 20) == 0 )
