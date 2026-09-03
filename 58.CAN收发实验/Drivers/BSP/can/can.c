@@ -1,10 +1,11 @@
 #include "can.h"
+#include "stdio.h"
 
 CAN_HandleTypeDef can_handle = {0};
 void can_init(void)
 {
     can_handle.Instance = CAN1;
-    can_handle.Init.Mode = CAN_MODE_NORMAL;
+    can_handle.Init.Mode = CAN_MODE_LOOPBACK;
     
     can_handle.Init.Prescaler = 4;
     can_handle.Init.TimeSeg1 = CAN_BS1_9TQ;
@@ -60,11 +61,40 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef *hcan)
 // can数据收发
 void can_send_data(uint32_t id, uint8_t *buf, uint8_t len)
 {
+    CAN_TxHeaderTypeDef tx_header = {0};
+    uint32_t tx_mail = CAN_TX_MAILBOX0;
+    tx_header.ExtId = id;
+    tx_header.DLC = len;
+    tx_header.IDE = CAN_ID_EXT;
+    tx_header.RTR = CAN_RTR_DATA;
+    HAL_CAN_AddTxMessage(&can_handle, &tx_header, buf, &tx_mail);
     
+    while(HAL_CAN_GetTxMailboxesFreeLevel(&can_handle) != 3);
+    
+    // 测试代码
+    uint8_t i = 0;
+    printf("发送数据：\r\n");
+    for (i = 0; i < len; i++)
+        printf("%X ", buf[i]);
+    printf("\n");
 }
 
 // can数据接收
 uint8_t can_receive_data(uint8_t *buf)
 {
+    CAN_RxHeaderTypeDef rx_header = {0};
     
+    if (HAL_CAN_GetRxFifoFillLevel(&can_handle, CAN_RX_FIFO0) == 0)
+        return 0;
+    HAL_CAN_GetRxMessage(&can_handle, CAN_RX_FIFO0, &rx_header, buf);
+    
+    // 测试代码
+    uint8_t i = 0;
+    printf("接收数据：\r\n");
+    for (i = 0; i < rx_header.DLC; i++)
+        printf("%X ", buf[i]);
+    printf("\r\n");
+    
+    return rx_header.DLC;
 }
+
