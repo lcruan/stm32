@@ -5,7 +5,7 @@ CAN_HandleTypeDef can_handle = {0};
 void can_init(void)
 {
     can_handle.Instance = CAN1;
-    can_handle.Init.Mode = CAN_MODE_LOOPBACK;
+    can_handle.Init.Mode = CAN_MODE_LOOPBACK; // CAN_MODE_LOOPBACK   CAN_MODE_NORMAL
     
     can_handle.Init.Prescaler = 4;
     can_handle.Init.TimeSeg1 = CAN_BS1_9TQ;
