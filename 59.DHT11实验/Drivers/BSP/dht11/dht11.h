@@ -12,7 +12,7 @@
                                 HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, GPIO_PIN_RESET);\
                             }while(0)
 #define DHT11_DQ_IN         HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)
-
+                            
+void dht11_read(uint8_t *result);
 
 #endif
-

@@ -59,3 +59,5 @@
 ..\..\output\main.o: ..\..\Drivers\BSP\led\led.h
 ..\..\output\main.o: ..\..\Drivers\SYSTEM\uart1\uart1.h
 ..\..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\main.o: ..\..\Drivers\BSP\dht11\dht11.h
+..\..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

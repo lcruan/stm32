@@ -2,6 +2,8 @@
 #include "delay.h"
 #include "led.h"
 #include "uart1.h"
+#include "dht11.h"
+#include "string.h"
 
 void led_init(void);                       /* LED初始化函数声明 */
 
@@ -13,8 +15,12 @@ int main(void)
     uart1_init(115200);
     printf("hello world!\r\n");
     
+    uint8_t dht11_result[4];
+    
     while(1)
-    { 
+    {
+        memset(dht11_result, 0, 4);
+        dht11_read(dht11_result);
     }
 }
 
