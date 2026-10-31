@@ -20,7 +20,7 @@
 #define ESP8266_MULTI_CONNECTION    1
 
 #define WIFI_SSID                   "ChinaNet-LCRK4V"
-#define WIFI_PWD                    "rrz20190923"
+#define WIFI_PWD                    ""
 
 #define TCP_SERVER_IP               "api.seniverse.com"
 #define TCP_SERVER_PORT             "80"
