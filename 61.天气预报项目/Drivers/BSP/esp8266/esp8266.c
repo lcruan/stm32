@@ -209,6 +209,27 @@ void esp8266_init(uint32_t baudRate)
         
 }
 
+// 目的是把esp8266_rx_buf拷贝到data里面
+uint16_t esp8266_copy_rxdata(char *data)
+{
+    memcpy(data, esp8266_rx_buf, esp8266_cntPre);
+    return esp8266_cntPre;
+}
+
+uint8_t esp8266_get_weather(uint8_t day)
+{
+    uint8_t ret = ESP8266_ERROR;
+    char http_request[200] = {0};
+    
+    sprintf(http_request, "GET https://api.seniverse.com/v3/weather/daily.json?key=SbsM0zcKJiTSTxUxV&location=WSSU6EXX52RE&language=zh-Hans&unit=c&start=%d&days=1\r\n", day);
+    ret = esp8266_send_command(http_request, "results");
+    printf("%s\r\n", esp8266_rx_buf);
+    if(ret == ESP8266_EOK)
+        return ESP8266_EOK;
+    else
+        return ESP8266_ERROR;
+}
+
 void esp8266_test(void)
 {
     // 测试函数：有接收到OK这个返回值

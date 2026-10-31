@@ -3,7 +3,7 @@
 
 #include "sys.h"
 
-#define ESP8266_RX_BUF_SIZE         128
+#define ESP8266_RX_BUF_SIZE         1024
 #define ESP8266_TX_BUF_SIZE         64
 
 //´íÎóÂë
@@ -20,15 +20,16 @@
 #define ESP8266_MULTI_CONNECTION    1
 
 #define WIFI_SSID                   "ChinaNet-LCRK4V"
-#define WIFI_PWD                    ""
+#define WIFI_PWD                    "rrz20190923"
 
-#define TCP_SERVER_IP               "192.168.101.36"
-#define TCP_SERVER_PORT             "8080"
+#define TCP_SERVER_IP               "api.seniverse.com"
+#define TCP_SERVER_PORT             "80"
 
 void esp8266_init(uint32_t baudRate);
 void esp8266_receive_data(void);
 void esp8266_test(void);
-
+uint8_t esp8266_get_weather(uint8_t day);
+uint16_t esp8266_copy_rxdata(char *data);
 
 #endif
 

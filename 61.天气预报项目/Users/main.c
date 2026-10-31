@@ -17,9 +17,11 @@ int main(void)
     uart1_init(115200);
     key_init();
     oled_init();
-//    esp8266_init(115200);
+    esp8266_init(115200);
     
     printf("hello world!\r\n");
+    
+    esp8266_get_weather(0);
     
     oled_show_init();
     

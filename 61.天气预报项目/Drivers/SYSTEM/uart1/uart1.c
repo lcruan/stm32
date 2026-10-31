@@ -69,6 +69,27 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart)
         __HAL_UART_ENABLE_IT(huart, UART_IT_RXNE);                          /* 使能UART1接收中断 */
         __HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);                          /* 使能UART1总线空闲中断 */
     }
+     else if (huart->Instance == USART2)                                          /* 如果是串口2，进行串口2 MSP初始化 */
+    {
+        __HAL_RCC_GPIOA_CLK_ENABLE();                                       /* 使能串口TX脚时钟 */
+        __HAL_RCC_USART2_CLK_ENABLE();                                      /* 使能串口时钟 */
+
+        gpio_init_struct.Pin = GPIO_PIN_2;                                  /* 串口发送引脚号 */
+        gpio_init_struct.Mode = GPIO_MODE_AF_PP;                            /* 复用推挽输出 */
+        gpio_init_struct.Pull = GPIO_PULLUP;                                /* 上拉 */
+        gpio_init_struct.Speed = GPIO_SPEED_FREQ_HIGH;                      /* IO速度设置为高速 */
+        HAL_GPIO_Init(GPIOA, &gpio_init_struct);
+                
+        gpio_init_struct.Pin = GPIO_PIN_3;                                 /* 串口RX脚 模式设置 */
+        gpio_init_struct.Mode = GPIO_MODE_AF_INPUT;    
+        HAL_GPIO_Init(GPIOA, &gpio_init_struct);                            /* 串口RX脚 必须设置成输入模式 */
+        
+        HAL_NVIC_EnableIRQ(USART2_IRQn);                                    /* 使能USART2中断通道 */
+        HAL_NVIC_SetPriority(USART2_IRQn, 3, 3);                            /* 组2，最低优先级:抢占优先级3，子优先级3 */
+
+        __HAL_UART_ENABLE_IT(huart, UART_IT_RXNE);                          /* 使能UART2接收中断 */
+        //__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);                          /* 使能UART2总线空闲中断 */
+    }
 }
 
 /**
