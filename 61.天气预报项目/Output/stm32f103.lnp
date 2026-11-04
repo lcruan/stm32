@@ -8,6 +8,7 @@
 "..\..\output\key.o"
 "..\..\output\esp8266.o"
 "..\..\output\cjson.o"
+"..\..\output\weather.o"
 "..\..\output\delay.o"
 "..\..\output\uart1.o"
 "..\..\output\sys.o"

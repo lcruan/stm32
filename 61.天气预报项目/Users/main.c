@@ -6,6 +6,7 @@
 #include "oled.h"
 #include "cJSON.h"
 #include "esp8266.h"
+#include "weather.h"
 
 void led_init(void);                       /* LED初始化函数声明 */
 
@@ -21,8 +22,8 @@ int main(void)
     
     printf("hello world!\r\n");
     
-    esp8266_get_weather(0);
-    
+//    esp8266_get_weather(0);
+    get_3days_weather();
     oled_show_init();
     
     while(1)

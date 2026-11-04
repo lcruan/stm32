@@ -63,3 +63,4 @@
 ..\..\output\main.o: ..\..\Drivers\BSP\oled\oled.h
 ..\..\output\main.o: ..\..\Drivers\BSP\cJSON\cJSON.h
 ..\..\output\main.o: ..\..\Drivers\BSP\esp8266\esp8266.h
+..\..\output\main.o: ..\..\Drivers\BSP\weather\weather.h
