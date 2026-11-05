@@ -24,10 +24,27 @@ int main(void)
     
 //    esp8266_get_weather(0);
     get_3days_weather();
-    oled_show_init();
+    show_weather(0);
+//    oled_show_init();
     
+    uint8_t key_num = 0;
+    uint8_t day = 0;
     while(1)
     { 
+        key_num = key_scan();
+        if(key_num == 1)  // 按下key1，切换天气
+        {
+            day++;
+            day %= 3;
+            show_weather(day);
+        }
+        else if (key_num == 2) // 按下key2，更新天气
+        {
+            printf("更新天气...\r\n");
+            get_3days_weather();
+            show_weather(0);
+            day = 0;
+        }
     }
 }
 
